@@ -1,0 +1,172 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="Adminmaster.master.cs" Inherits="Adminmaster" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title></title>
+    <asp:ContentPlaceHolder id="head" runat="server">
+    </asp:ContentPlaceHolder>
+<style>
+        body {
+ background-image: url("blue2.jpg");
+        }
+ul {
+    list-style-type:none;
+    width:100%;
+}
+.lverules {
+    font-size:x-large;
+}
+ .m1 {
+    padding:20px;
+    float:left;
+    text-align:center;
+    font-size:large;
+}
+a {
+    text-decoration:none;
+    font-size:large;
+    
+}
+a:hover {
+    color:darkgreen;
+    font-weight:bolder;
+    
+    }
+.t1 {
+    text-align:center;
+    font-size:xx-large;
+    color:darkblue;
+    font-family:'Times New Roman';
+    text-decoration-line:underline
+}
+ .t2 {
+    text-align:center;
+    font-size:x-large;
+    color:darkblue;
+    text-decoration-line:underline
+}
+  .t3 {
+    text-align:center;
+    font-size:X-large;
+    color:darkblue;
+    padding-top:30PX;
+    font-weight:bold;
+    font-family:'Lucida Calligraphy'
+}
+
+  #nav ul{
+    padding:0;
+    list-style:none;
+}
+
+#nav ul li{
+    float:left;
+    text-align:center;
+    list-style:none;
+}
+#nav ul li a{
+    display:block;
+}
+#nav ul li:hover ul{
+    display:block;
+}
+.tdlogo {
+    width:10%
+}
+.tdtitle {
+    width:80%;
+}
+#merquee1 {
+    color:black;
+}
+#merquee2 {
+    color:black;
+}
+.MenuM{
+     padding:20px;
+    float:left;
+    text-align:center;
+    font-size:large;
+    list-style-type:none;
+    width:100%;
+    
+}
+
+</style>
+    <style type="text/css">
+        .auto-style1 {
+        }
+        .auto-style2 {
+        }
+        </style>
+</head>
+<body>
+    <form id="form1" runat="server">
+    <div>
+    </div>
+        <table style="width:100%;">
+            <tr>
+                <td class="tdlogo">
+                    <asp:Image ID="imgLogo" runat="server" img src="kmit.gif" Width="300px" Height="200px" /></td>
+                <td class="tdtitle">
+                    <ul>
+                        <li class="t1"><u>Keshav Memorial Institute of Technology</u></li>
+                        <li class="t2"><u>Narayanguda, Hyderabad-500029</u></li>
+                        <li class="t3"> TIME TABLE AND SYLLABUS MANAGEMENT</li>
+                    </ul>
+                </td>
+                    
+            </tr>
+            <tr>
+                <td>
+                    
+                </td>
+            </tr>
+            <tr>
+                <td class="auto-style1" colspan="2" style="background-color:lightblue">
+                   
+                     <asp:Menu ID="Menu1" runat="server" BackColor="#E3EAEB" CssClass="MenuM" DynamicHorizontalOffset="2" Font-Names="Verdana" Font-Size="0.8em" ForeColor="#666666" Orientation="Horizontal" StaticSubMenuIndent="10px" OnMenuItemClick="Menu1_MenuItemClick">
+                         <DynamicHoverStyle BackColor="#666666" ForeColor="White" />
+                         <DynamicMenuItemStyle HorizontalPadding="5px" VerticalPadding="2px" />
+                         <DynamicMenuStyle BackColor="#E3EAEB" />
+                         <DynamicSelectedStyle BackColor="#1C5E55" />
+                         <Items>
+                             <asp:MenuItem Text="Update Syllabus" Value="Update Syllabus" NavigateUrl="~/Syllabus.aspx"></asp:MenuItem>
+                             <asp:MenuItem Text="Create Timetable"  Value="Timetable"  NavigateUrl="~/Newtable.aspx">
+                                  
+                             </asp:MenuItem>
+                             <asp:MenuItem Text="Set Subjects" Value="Set Subjects">
+                                 <asp:MenuItem Text="Add Subjects" Value="Insert" NavigateUrl="~/Subjects.aspx"></asp:MenuItem>
+                                 <asp:MenuItem Text="Delete Subjects" Value="Delete" NavigateUrl="~/SubjectD.aspx"></asp:MenuItem>
+                             </asp:MenuItem>
+                             <asp:MenuItem Text="Manage Faculty" Value="Set Faculty"> 
+                                 <asp:MenuItem Text="Add Faculty" Value="Insert" NavigateUrl="~/FacManagement.aspx"></asp:MenuItem>
+                                 <asp:MenuItem Text="Edit Faculty Details" Value="Update" NavigateUrl="~/FacE.aspx"></asp:MenuItem>
+                                 <asp:MenuItem Text="Delete Faculty" Value="Delete" NavigateUrl="~/FacD.aspx"></asp:MenuItem>
+                             </asp:MenuItem>
+
+                             <asp:MenuItem Text="Logout" Value="Logout" NavigateUrl="~/Login.aspx"></asp:MenuItem>
+                         </Items>
+                         <StaticHoverStyle BackColor="#666666" ForeColor="White" />
+                         <StaticMenuItemStyle HorizontalPadding="5px" VerticalPadding="2px" />
+                         <StaticSelectedStyle BackColor="#1C5E55" />
+                     </asp:Menu>
+                       
+                </td>
+            </tr>
+            <tr>
+                <td class="auto-style2" colspan="2">
+        <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server"></asp:ContentPlaceHolder>
+        <asp:ContentPlaceHolder ID="ContentPlaceHolderE" runat="server"></asp:ContentPlaceHolder>
+        <asp:ContentPlaceHolder ID="ContentPlaceHolderD" runat="server"></asp:ContentPlaceHolder>
+                </td>
+            </tr>
+            <tr>
+                <td class="auto-style2" colspan="2">&nbsp;</td>
+            </tr>
+        </table>
+    </form>
+</body>
+</html>

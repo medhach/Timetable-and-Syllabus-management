@@ -1,0 +1,133 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="Studentmaster.master.cs" Inherits="Studentmaster" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title></title>
+    <asp:ContentPlaceHolder id="head" runat="server">
+    </asp:ContentPlaceHolder>
+<style>
+        body {
+ background-image: url("blue2.jpg");
+        }
+ul {
+    list-style-type:none;
+    width:100%;
+}
+.lverules {
+    font-size:x-large;
+}
+ .m1 {
+    padding:20px;
+    float:left;
+    text-align:center;
+    font-size:large;
+}
+a {
+    text-decoration:none;
+    font-size:large;
+    
+}
+a:hover {
+    color:darkgreen;
+    font-weight:bolder;
+    
+    }
+.t1 {
+    text-align:center;
+    font-size:xx-large;
+    color:darkblue;
+    font-family:'Times New Roman';
+    text-decoration-line:underline
+}
+ .t2 {
+    text-align:center;
+    font-size:x-large;
+    color:darkblue;
+    text-decoration-line:underline
+}
+  .t3 {
+    text-align:center;
+    font-size:X-large;
+    color:darkblue;
+    padding-top:30PX;
+    font-weight:bold;
+    font-family:'Lucida Calligraphy'
+}
+.tdlogo {
+    width:10%
+}
+.tdtitle {
+    width:80%;
+}
+#merquee1 {
+    color:black;
+}
+#merquee2 {
+    color:black;
+}
+</style>
+    <style type="text/css">
+        .auto-style1 {
+        }
+        .auto-style2 {
+        }
+        .auto-style3 {
+            width: 284px;
+        }
+    </style>
+</head>
+<body>
+    <form id="form1" runat="server">
+    <div>
+    </div>
+        <table style="width:100%;">
+            <tr>
+                <td class="tdlogo">
+                    <asp:Image ID="imgLogo" runat="server" img src="kmit.gif" Width="300px" Height="200px" /></td>
+                <td class="tdtitle">
+                    <ul>
+                        <li class="t1"><u>Keshav Memorial Institute of Technology</u></li>
+                        <li class="t2"><u>Narayanguda, Hyderabad-500029</u></li>
+                        <li class="t3"> TIME TABLE AND SYLLABUS MANAGEMENT</li>
+                    </ul>
+                </td>
+                    
+            </tr>
+            <tr>
+                <td>
+                    
+                </td>
+            </tr>
+            <tr>
+                <td class="auto-style1" colspan="2" style="background-color:lightblue">
+                    <ul>
+                        <li class="m1"><a href="CheckSyllabus.aspx">Check Syllabus</a></li>
+                        <li class="m1"><a href="Table.aspx">Check Timetable</a></li>
+                        <li class="m1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                            <a href="Login.aspx">Logout</a></li>
+                        
+                    </ul>
+                </td>
+            </tr>
+            <tr>
+                <td class="auto-style2" colspan="2">
+        <asp:ContentPlaceHolder id="ContentPlaceHolder1" runat="server">
+        
+        </asp:ContentPlaceHolder>
+                </td>
+            </tr>
+            <tr>
+                <td class="auto-style2" colspan="2">&nbsp;</td>
+            </tr>
+        </table>
+    </form>
+</body>
+</html>
+    
